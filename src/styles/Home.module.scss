@@ -1,0 +1,431 @@
+@import "_variables.scss";
+@media screen and (min-width: 768px) {
+    .Home {
+        :global .mainbanner {
+            background-color: $primary-color;
+            padding: 0 10%;
+            height: 88vh;
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr 1fr;
+            :global .overlays {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                display: flex;
+                flex-direction: column;
+                a {
+                    i {
+                        color: $pure-black;
+                    }
+                }
+            }
+            :global .image {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            :global .maincontainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                h1 {
+                    font-size: 80px;
+                    line-height: 80px;
+                    font-weight: 800;
+                }
+                p {
+                    margin-top: 50px;
+                }
+                button {
+                    background-color: $pure-black;
+                    color: $pure;
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    margin: 30px 0;
+                    font-weight: 800;
+                }
+            }
+        }
+        :global .About {
+            margin: -50px 15%;
+            z-index: 10;
+            position: relative;
+            background-color: $primary-color;
+            padding: 20px 40px;
+            border-radius: 5px;
+            border: 1px solid $pure-black;
+        }
+        :global .portfolio {
+            margin: 150px 0;
+            h1 {
+                text-align: center;
+                font-size: 32px;
+            }
+            :global .cards {
+                margin: 50px 15%;
+                :global .card {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 50px;
+                    margin: 50px 0;
+                    :global .image {
+                        img {
+                            border-radius: 5px;
+                        }
+                    }
+                    :global .content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        row-gap: 20px;
+                        ul {
+                            list-style: none;
+                            li {
+                                font-size: 14px;
+                                margin: 5px;
+                                display: inline-block;
+                                background-color: $primary-color;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                font-weight: 300;
+                            }
+                        }
+                        h2 {
+                            font-size: 24px;
+                        }
+                        p {
+                            font-size: 13px;
+                        }
+
+                        button {
+                            background-color: $pure;
+                            padding: 10px;
+                            border-radius: 30px;
+                            display: flex;
+                            align-items: center;
+                            :global .play {
+                                i {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            &:hover {
+                                &::after {
+                                    content: "Preview";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        :global .myservices {
+            background-color: $primary-color;
+            padding: 100px;
+            h1 {
+                text-align: center;
+                font-size: 32px;
+            }
+            :global .cards {
+                margin: 50px 10%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 30px;
+                align-items: center;
+                :global .card {
+                    border: 1px solid $pure-black;
+                    background-color: $pure;
+                    border-radius: 5px;
+                    padding: 0px 10px;
+                    :global .top {
+                        text-align: center;
+                        margin: 20px 0;
+                        h2 {
+                            font-size: 28px;
+                        }
+                        h5 {
+                            font-weight: 500;
+                            font-size: 14px;
+                        }
+                    }
+                    :global .pricing {
+                        margin: 30px 0;
+                        h2 {
+                            display: flex;
+                            align-items: center;
+                            :global .start {
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                            :global .price {
+                                font-size: 50px;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                    :global .content {
+                        h3 {
+                            font-size: 14px;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                font-size: 13px;
+                                font-weight: 300;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    :global .button {
+                        button {
+                            background-color: $pure-black;
+                            color: $pure;
+                            padding: 10px 30px;
+                            border-radius: 5px;
+                            margin: 10px 0;
+                            width: 100%;
+                            font-weight: 800;
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                }
+                :global .card:nth-child(2) {
+                    transform: scale(1.1);
+                    color: #0f3390;
+                    border-color: #0f3390;
+                    button {
+                        background-color: #0f3390;
+                    }
+                }
+            }
+            :global .bottom-text {
+                text-align: center;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .Home {
+        :global .mainbanner {
+            background-color: $primary-color;
+            padding: 0 10%;
+            min-height: 88vh;
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr;
+            :global .overlays {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                display: flex;
+                flex-direction: column;
+                a {
+                    i {
+                        color: $pure-black;
+                    }
+                }
+            }
+            :global .image {
+                padding: 30px 0;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            :global .maincontainer {
+                order: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                // padding: 100px 0;
+                h1 {
+                    font-size: 50px;
+                    line-height: 50px;
+                    font-weight: 800;
+                }
+                p {
+                    margin-top: 50px;
+                }
+                button {
+                    background-color: $pure-black;
+                    color: $pure;
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    margin: 30px 0;
+                    font-weight: 800;
+                }
+            }
+        }
+        :global .About {
+            display: block;
+            margin: -50px 10%;
+            z-index: 10;
+            position: relative;
+            background-color: $primary-color;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid $pure-black;
+            p {
+                font-size: 12px;
+            }
+        }
+        :global .portfolio {
+            display: block;
+            margin: 100px 0;
+            h1 {
+                text-align: center;
+                font-size: 24px;
+            }
+            :global .cards {
+                margin: 50px 20px;
+                :global .card {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    column-gap: 50px;
+                    margin: 50px 0;
+                    :global .image {
+                        img {
+                            border-radius: 5px;
+                        }
+                    }
+                    :global .content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        row-gap: 20px;
+                        ul {
+                            list-style: none;
+                            li {
+                                font-size: 14px;
+                                margin: 5px;
+                                display: inline-block;
+                                background-color: $primary-color;
+                                padding: 5px 10px;
+                                border-radius: 5px;
+                                font-weight: 300;
+                            }
+                        }
+                        h2 {
+                            font-size: 18px;
+                        }
+                        p {
+                            font-size: 10px;
+                        }
+
+                        button {
+                            background-color: $pure;
+                            padding: 10px;
+                            border-radius: 30px;
+                            display: flex;
+                            align-items: center;
+                            :global .play {
+                                i {
+                                    font-size: 20px;
+                                }
+                            }
+
+                            &:hover {
+                                &::after {
+                                    content: "Preview";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        :global .myservices {
+            display: block;
+            background-color: $primary-color;
+            padding: 50px 0;
+            h1 {
+                text-align: center;
+                font-size: 24px;
+            }
+            :global .cards {
+                margin: 25px 20px;
+                display: grid;
+                grid-template-columns: 1fr;
+                align-items: center;
+                row-gap: 20px;
+                :global .card {
+                    border: 1px solid $pure-black;
+                    background-color: $pure;
+                    border-radius: 5px;
+                    padding: 0px 10px;
+                    :global .top {
+                        text-align: center;
+                        margin: 20px 0;
+                        h2 {
+                            font-size: 28px;
+                        }
+                        h5 {
+                            font-weight: 500;
+                            font-size: 14px;
+                        }
+                    }
+                    :global .pricing {
+                        margin: 30px 0;
+                        h2 {
+                            display: flex;
+                            align-items: center;
+                            :global .start {
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+                            :global .price {
+                                font-size: 50px;
+                                font-weight: 800;
+                            }
+                        }
+                    }
+                    :global .content {
+                        h3 {
+                            font-size: 14px;
+                        }
+                        ul {
+                            list-style: none;
+                            li {
+                                font-size: 13px;
+                                font-weight: 300;
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                    :global .button {
+                        button {
+                            background-color: $pure-black;
+                            color: $pure;
+                            padding: 15px 30px;
+                            border-radius: 5px;
+                            margin: 10px 0;
+                            width: 100%;
+                            font-weight: 800;
+                            outline: none;
+                            border: none;
+                        }
+                    }
+                }
+                :global .card:nth-child(2) {
+                    color: #0f3390;
+                    border-color: #0f3390;
+                    button {
+                        background-color: #0f3390;
+                    }
+                }
+            }
+            :global .bottom-text {
+                text-align: center;
+                margin: 0 20px;
+                font-size: 13px;
+            }
+        }
+    }
+}
